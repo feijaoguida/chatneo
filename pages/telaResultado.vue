@@ -36,7 +36,8 @@ export default {
         { label: "Entregas", child: "entregasChild", state: false },
         { label: "Trocas", child: "trocasChild", state: false },
         { label: "Pedidos", child: "pedidosChild", state: false },
-        { label: "Produtos", child: "produtosChild", state: false }
+        { label: "Produtos", child: "produtosChild", state: false },
+        { label: "Cadastre-se", child: "formChild", state: false }
       ]
     };
   },
