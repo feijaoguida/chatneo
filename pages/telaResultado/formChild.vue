@@ -48,6 +48,18 @@
         <b-button type="submit" variant="primary">ENVIAR FORMULÁRIO</b-button>
       </b-form>
     </div>
+    <div class="d-flex justify-content-center flex-column align-items-center">
+      <b-card bg-variant="success" text-variant="white" class="m-1 w-75 text-left">
+        <b-card-text>
+          Seu e-mail foi enviado com sucesso! Seu número de protocolo é
+          <strong>XXXXXX</strong>. Aguarde, em breve entraremos em contato!
+        </b-card-text>
+      </b-card>
+      <b-button @click="$emit('click')" class="w-50 pt-2">
+        <b-icon icon="chevron-left"></b-icon>
+        <span class="text-info">RETORNAR À TELA INICIAL</span>
+      </b-button>
+    </div>
   </div>
 </template>
 

@@ -4,7 +4,10 @@
 
     <Nuxt />
 
-    <div class="innerdiv">
+    <div class="w-100 d-flex flex-column align-items-end innerdiv">
+      <div style="font-size: 2rem;">
+        <b-icon icon="chat" class="rounded-circle bg-danger p-2" variant="light"></b-icon>
+      </div>
       <Assist />
     </div>
   </b-container>
@@ -12,13 +15,13 @@
 
 <style scoped>
 .innerdiv {
-  position: absolute;
+  position: relative;
   float: right;
   right: 1em;
   bottom: 0;
   margin-bottom: 2em;
   /* Push it up into the element before it. This is a trick for bottom-right */
-  right: 1em;
+
   z-index: 200;
 }
 </style>
