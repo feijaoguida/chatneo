@@ -1,4 +1,4 @@
-# chatneo
+# chatneo - Autoatendimento.
 
 ## Build Setup
 
