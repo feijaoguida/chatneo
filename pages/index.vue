@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="h6 align-self-center">Sua compra foi feita hein</p>
+    <p class="h6 align-self-center text-center text-muted">Sua compra foi feita hein:</p>
     <div class="m-5 w-button d-flex justify-content-around">
       <ButtonLarge @click="link" description="Loja Online" scale="3" icon="Phone" />
       <ButtonLarge @click="linkExterno" description="Loja Física" scale="3" icon="shop" />

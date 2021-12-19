@@ -1,7 +1,7 @@
 <template>
   <div class="button d-flex flex-column align-items-center">
-    <b-button @click="$emit('click')" variant="danger" class="button pt-2">
-      <b-icon font-scale="3" :icon="icon"></b-icon>
+    <b-button @click="$emit('click')" variant="danger" class="button p-3">
+      <b-icon font-scale="2" :icon="icon"></b-icon>
     </b-button>
     <div>
       <p class="font">{{label}}</p>
