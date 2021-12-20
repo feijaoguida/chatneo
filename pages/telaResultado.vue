@@ -21,8 +21,9 @@
         />
       </div>
     </b-col>
-    <b-col class="d-flex flex-column align-items-center">
+    <b-col class="d-flex flex-column align-items-center w-100">
       <NuxtChild />
+      <Rodape class="w-50 float-left" />
     </b-col>
   </b-row>
 </template>
