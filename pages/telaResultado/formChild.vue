@@ -55,7 +55,7 @@
           ></b-form-textarea>
         </b-form-group>
         <b-button
-          @click="enviar = true"
+          @click="enviar = true;"
           type="submit"
           class="float-right"
           variant="success"
@@ -69,7 +69,7 @@
           <strong>XXXXXX</strong>. Aguarde, em breve entraremos em contato!
         </b-card-text>
       </b-card>
-      <b-button @click="enviar = false" variant="light" class="w-50 pt-2 bg-transparent">
+      <b-button @click="voltarHome()" variant="light" class="w-50 pt-2 bg-transparent">
         <b-icon variant="danger" icon="chevron-left"></b-icon>
         <span class="text-info">RETORNAR À TELA INICIAL</span>
       </b-button>
@@ -103,8 +103,11 @@ export default {
     };
   },
   computed: {
+    voltarHome() {
+      this.enviar = false;
+      this.$router.push(`/`);
+    },
     assuntoState() {
-      console.log("s -- ", this.assuntos, " --- o --", this.form.assunto);
       return this.assuntos.includes(this.form.assunto);
     },
 

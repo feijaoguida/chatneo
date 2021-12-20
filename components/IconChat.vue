@@ -105,7 +105,7 @@ export default {
             year: 2018,
             month: 1,
             day: 26,
-            hour: 19,
+            hour: 10,
             minute: 10,
             second: 3,
             millisecond: 123
@@ -124,7 +124,7 @@ export default {
             month: 1,
             day: 26,
             hour: 10,
-            minute: 10,
+            minute: 11,
             second: 3,
             millisecond: 123
           },
@@ -138,11 +138,28 @@ export default {
           myself: false,
           participantId: 1,
           timestamp: {
-            year: 2011,
-            month: 3,
-            day: 5,
+            year: 2018,
+            month: 1,
+            day: 26,
             hour: 10,
-            minute: 10,
+            minute: 12,
+            second: 3,
+            millisecond: 123
+          },
+          uploaded: true,
+          viewed: true,
+          type: "text"
+        },
+        {
+          content: "Obrigado",
+          myself: true,
+          participantId: 3,
+          timestamp: {
+            year: 2018,
+            month: 1,
+            day: 26,
+            hour: 10,
+            minute: 13,
             second: 3,
             millisecond: 123
           },

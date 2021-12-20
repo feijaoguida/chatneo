@@ -13,11 +13,11 @@
       >Navegue pelos assuntos mais buscados:</p>
     </div>
     <div class="d-flex flex-row w-100 justify-content-between">
-      <ButtonLabelDown @click="navegarTela" label="Cadastro" icon="person-fill" />
-      <ButtonLabelDown @click="navegarTela" label="Entregas" icon="truck" />
-      <ButtonLabelDown @click="navegarTela" label="Trocas" icon="arrow-down-up" />
-      <ButtonLabelDown @click="navegarTela" label="Pedidos" icon="bag" />
-      <ButtonLabelDown @click="navegarTela" label="Produtos" icon="lamp-fill" />
+      <ButtonLabelDown @click="navegarTela('cadastroChild')" label="Cadastro" icon="person-fill" />
+      <ButtonLabelDown @click="navegarTela('entregasChild')" label="Entregas" icon="truck" />
+      <ButtonLabelDown @click="navegarTela('trocasChild')" label="Trocas" icon="arrow-down-up" />
+      <ButtonLabelDown @click="navegarTela('pedidosChild')" label="Pedidos" icon="bag" />
+      <ButtonLabelDown @click="navegarTela('produtosChild')" label="Produtos" icon="lamp-fill" />
     </div>
   </div>
 </template>
@@ -25,8 +25,8 @@
 <script>
 export default {
   methods: {
-    navegarTela() {
-      this.$router.push(`/telaResultado`);
+    navegarTela(tela) {
+      this.$router.push(`/telaResultado/${tela}`);
     }
   }
 };

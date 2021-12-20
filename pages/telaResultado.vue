@@ -54,7 +54,16 @@ export default {
       this.$router.push(`/telaResultado/${btn.child}`);
       this.buttons.map(b => (b.state = false));
       btn.state = true;
+    },
+    setarButton() {
+      let path = this.$route.path.split("/");
+      this.buttons.map(b => {
+        if (b.child == path[2]) b.state = true;
+      });
     }
+  },
+  mounted() {
+    this.setarButton();
   }
 };
 </script>
