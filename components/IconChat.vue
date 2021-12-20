@@ -5,7 +5,7 @@
     </div>
 
     <b-popover
-      :show.sync="show"
+      :show.sync="showprop"
       target="popover-1-div"
       placement="auto"
       triggers="hover focus"
@@ -25,7 +25,7 @@
           :submit-icon-size="submitIconSize"
           :load-more-messages="toLoad.length > 0 ? loadMoreMessages : null"
           :async-mode="asyncMode"
-          :scroll-bottom="true"
+          :scroll-bottom="scrollBottom"
           :display-header="true"
           :send-images="true"
           :profile-picture-config="profilePictureConfig"
@@ -56,6 +56,7 @@ export default {
   },
   data() {
     return {
+      showprop: this.show,
       visible: true,
       participants: [
         {
