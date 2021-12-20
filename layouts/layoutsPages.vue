@@ -1,7 +1,6 @@
 <template>
   <b-container fluid="xl" class="mt-5 d-flex flex-column align-items-center">
-    <p class="h6 m-5 text-center">CENTRAL DE ATENDIMENTO</p>
-
+    <p class="h6 m-5 text-left w-75">CENTRAL DE ATENDIMENTO</p>
     <Nuxt />
 
     <div class="w-100 d-flex flex-column align-items-end innerdiv">
@@ -317,8 +316,7 @@ export default {
   right: 1em;
   bottom: 0;
   margin-bottom: 2em;
-  /* Push it up into the element before it. This is a trick for bottom-right */
-
+  margin-top: 2em;
   z-index: 200;
 }
 </style>

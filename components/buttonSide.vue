@@ -1,6 +1,6 @@
 <template>
   <b-button
-    class="button d-flex justify-content-between mb-1 align-items-center"
+    class="button d-flex justify-content-between m-1 align-items-center"
     @click="$emit('click')"
     variant="danger"
     :pressed="pressed"

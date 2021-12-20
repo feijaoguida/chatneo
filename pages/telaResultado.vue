@@ -1,17 +1,17 @@
 <template>
-  <b-row class="d-flex flex-row container w-100">
-    <b-col cols="4" class="d-flex flex-column container align-items-center">
-      <div class="d-flex w-100 flex-column container align-items-center">
+  <b-row class="d-flex flex-wrap flex-row w-100 flexAjuste">
+    <b-col cols="5" class="d-flex flex-column align-items-center maxWidth">
+      <div class="d-flex w-100 flex-column align-items-center">
         <p>Como podemos te ajudar</p>
-        <b-input-group class="mb-2">
-          <b-form-input aria-label="Large text input with switch"></b-form-input>
+        <b-input-group size="sm" class="mb-4">
+          <b-form-input type="search" placeholder="Ex.: Como posso acompanha meu pedido?"></b-form-input>
           <b-input-group-append is-text>
-            <b-icon icon="search"></b-icon>
+            <b-icon font-scale="1" icon="search"></b-icon>
           </b-input-group-append>
         </b-input-group>
         <p>ASSUNTOS MAIS BUSCADOS</p>
       </div>
-      <div class="d-flex flex-column w-100 justify-content-between">
+      <div class="d-flex flex-column w-100 justify-content-between maxHeight">
         <ButtonSide
           v-for="(btn, idx) in buttons"
           :key="idx"
@@ -21,7 +21,7 @@
         />
       </div>
     </b-col>
-    <b-col class="d-flex flex-column container align-items-center">
+    <b-col class="d-flex flex-column align-items-center">
       <NuxtChild />
     </b-col>
   </b-row>
@@ -29,6 +29,7 @@
 
 <script>
 export default {
+  layout: "layoutsPages",
   data() {
     return {
       buttons: [
@@ -50,5 +51,28 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+@media (max-width: 576px) {
+  .flexAjuste {
+    flex-direction: column !important;
+  }
+
+  .maxWidth {
+    max-width: 100% !important;
+  }
+
+  .maxHeight {
+    flex-wrap: wrap;
+    height: 145px;
+  }
+
+  .mb-5 {
+    margin-bottom: 1rem !important;
+  }
+}
+</style>
+
+
 
 
