@@ -1,10 +1,16 @@
 <template>
   <div class="w-100 d-flex flex-column align-items-end innerdiv">
     <div id="popover-1-div" style="font-size: 2rem;">
-      <b-icon icon="chat" class="rounded-circle bg-danger p-2" variant="light"></b-icon>
+      <b-icon icon="chat" class="rounded-circle bg-danger p-2 cursor" variant="light"></b-icon>
     </div>
 
-    <b-popover target="popover-1-div" placement="auto" triggers="hover focus" custon-class="maxH">
+    <b-popover
+      :show.sync="show"
+      target="popover-1-div"
+      placement="auto"
+      triggers="hover focus"
+      custon-class="maxH"
+    >
       <div class="maxSize">
         <Chat
           :participants="participants"
@@ -44,6 +50,9 @@ import "vue-quick-chat/dist/vue-quick-chat.css";
 export default {
   components: {
     Chat
+  },
+  props: {
+    show: Boolean
   },
   data() {
     return {
@@ -301,5 +310,9 @@ export default {
 
 .quick-chat-container {
   max-height: 330px !important;
+}
+
+.cursor {
+  cursor: pointer;
 }
 </style>

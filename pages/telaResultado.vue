@@ -23,9 +23,10 @@
     </b-col>
     <b-col class="d-flex flex-column align-items-center w-100">
       <NuxtChild />
-      <IconChat />
+      <IconChat :show.sync="show" />
       <div class="flutuante">
         <Rodape
+          @click="show = !show"
           class="w-50 float-left"
           style="position: relative;
                   min-height: 50vh !important;"
@@ -40,6 +41,7 @@ export default {
   layout: "layoutsPages",
   data() {
     return {
+      show: false,
       buttons: [
         { label: "Cadastro", child: "cadastroChild", state: false },
         { label: "Entregas", child: "entregasChild", state: false },

@@ -7,7 +7,7 @@
     </div>
     <div class="d-flex flex-row">
       <b-icon @click="openChild" class="ml-3 mr-3 cursorPointer" scale="2" icon="envelope"></b-icon>
-      <b-icon class="ml-3" scale="2" icon="chat-text"></b-icon>
+      <b-icon @click="$emit('click')" class="ml-3 cursorPointer" scale="2" icon="chat-text"></b-icon>
     </div>
   </div>
 </template>
