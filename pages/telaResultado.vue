@@ -23,7 +23,14 @@
     </b-col>
     <b-col class="d-flex flex-column align-items-center w-100">
       <NuxtChild />
-      <Rodape class="w-50 float-left" />
+      <IconChat />
+      <div class="flutuante">
+        <Rodape
+          class="w-50 float-left"
+          style="position: relative;
+                  min-height: 50vh !important;"
+        />
+      </div>
     </b-col>
   </b-row>
 </template>
@@ -38,8 +45,7 @@ export default {
         { label: "Entregas", child: "entregasChild", state: false },
         { label: "Trocas", child: "trocasChild", state: false },
         { label: "Pedidos", child: "pedidosChild", state: false },
-        { label: "Produtos", child: "produtosChild", state: false },
-        { label: "Cadastre-se", child: "formChild", state: false }
+        { label: "Produtos", child: "produtosChild", state: false }
       ]
     };
   },
@@ -70,6 +76,14 @@ export default {
 
   .mb-5 {
     margin-bottom: 1rem !important;
+  }
+
+  .flutuante {
+    right: 1em;
+    bottom: 0;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    z-index: 200;
   }
 }
 </style>
