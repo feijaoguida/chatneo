@@ -9,26 +9,33 @@
         <b-form-group id="input-group-3" label="Assunto:" label-for="input-3">
           <b-form-select
             id="input-3"
-            :state="false"
+            :state="assuntoState"
             v-model="form.assunto"
             :options="assuntos"
             required
           ></b-form-select>
-          <b-form-invalid-feedback :state="false">O Campo assunto é obrigatório!</b-form-invalid-feedback>
+          <b-form-invalid-feedback>O Campo assunto é obrigatório!</b-form-invalid-feedback>
         </b-form-group>
         <b-form-group id="input-group-2" label="Nome:" label-for="input-2">
-          <b-form-input id="input-2" v-model="form.name" placeholder="Insira seu nome" required></b-form-input>
-          <b-form-invalid-feedback :state="false">O Campo nome é obrigatório!</b-form-invalid-feedback>
+          <b-form-input
+            :state="nomeState"
+            id="input-2"
+            v-model="form.name"
+            placeholder="Insira seu nome"
+            required
+          ></b-form-input>
+          <b-form-invalid-feedback>O Campo nome é obrigatório!</b-form-invalid-feedback>
         </b-form-group>
         <b-form-group id="input-group-1" label="Email:" label-for="input-1">
           <b-form-input
             id="input-1"
+            :state="emailState"
             v-model="form.email"
             type="email"
             placeholder="Insira seu e-mail"
             required
           ></b-form-input>
-          <b-form-invalid-feedback :state="false">O Campo e-mail é obrigatório!</b-form-invalid-feedback>
+          <b-form-invalid-feedback>O Campo e-mail é obrigatório!</b-form-invalid-feedback>
         </b-form-group>
         <b-form-group id="input-group-1" label="Anexos" label-for="input-1">
           <b-form-file
@@ -80,7 +87,7 @@ export default {
       form: {
         email: "",
         name: "",
-        assunto: null,
+        assunto: "",
         checked: [],
         file: null,
         text: ""
@@ -94,6 +101,22 @@ export default {
         "Produto"
       ]
     };
+  },
+  computed: {
+    assuntoState() {
+      console.log("s -- ", this.assuntos, " --- o --", this.form.assunto);
+      return this.assuntos.includes(this.form.assunto);
+    },
+
+    nomeState() {
+      return this.form.name.length > 2 ? true : false;
+    },
+
+    emailState() {
+      return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+        this.form.email
+      );
+    }
   }
 };
 </script>

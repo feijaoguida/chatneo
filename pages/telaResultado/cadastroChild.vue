@@ -3,7 +3,7 @@
     <div>
       <h4>Cadastro</h4>
     </div>
-    <div class="w-100" v-for="(item, idx) in items" :key="idx">
+    <div class="w-100 mb-3" v-for="(item, idx) in items" :key="idx">
       <span
         class="align-items-lg-start w-100 fontSize"
         v-b-toggle="`${item.toggle}`"
